@@ -1,0 +1,51 @@
+@media (min-width: 1600px){
+
+    .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 1540px;
+    }
+}
+
+@each $color, $value in $colors {
+    .bg-#{$color} {
+        background-color: $value;
+        color: color-yiq($value);
+    }
+}
+
+
+body h1,
+body .h1,
+body .heading1 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+}
+body h2,
+body .h2,
+body .heading2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+body h3,
+body .h3,
+body .heading3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+}
+body h4,
+body .h4,
+body .heading4 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+body h5,
+body .h5,
+body .subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+}

@@ -11,7 +11,7 @@
         <div class="table-body-wrapper">
             <table>
                 <tbody>
-                    <tr v-for="(item, i) in items" :key="i">
+                    <tr v-for="(item, i) in items" :key="i" v-if="i < 5">
                         <td>{{ item.path }}</td>
                         <!-- <td class="td-date">{{ date_format(item.date) }}</td> -->
                         <td class="td-count">{{ item.count }}</td>
@@ -85,7 +85,7 @@ export default {
                 // console.log( response.data );
                 vm.liveUser = response.data.live_users;
                 vm.items = response.data.items;
-                vm.check_last_update();
+                // vm.check_last_update();
                 vm.runTimer();
             })
             .catch(error => {

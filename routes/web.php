@@ -15,4 +15,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'AnalyticController@index');
 
+Route::get('/analytics', 'Analytic\RealtimeController@test');
 Route::get('/analytics/realtime', 'Analytic\RealtimeController@index');

@@ -78,8 +78,8 @@ __webpack_require__.r(__webpack_exports__);
         vm.loading = false; // console.log( response.data );
 
         vm.liveUser = response.data.live_users;
-        vm.items = response.data.items;
-        vm.check_last_update();
+        vm.items = response.data.items; // vm.check_last_update();
+
         vm.runTimer();
       })["catch"](function (error) {
         vm.loading = false; // console.log( error );
@@ -189,13 +189,15 @@ var render = function() {
           _c(
             "tbody",
             _vm._l(_vm.items, function(item, i) {
-              return _c("tr", { key: i }, [
-                _c("td", [_vm._v(_vm._s(item.path))]),
-                _vm._v(" "),
-                _c("td", { staticClass: "td-count" }, [
-                  _vm._v(_vm._s(item.count))
-                ])
-              ])
+              return i < 5
+                ? _c("tr", { key: i }, [
+                    _c("td", [_vm._v(_vm._s(item.path))]),
+                    _vm._v(" "),
+                    _c("td", { staticClass: "td-count" }, [
+                      _vm._v(_vm._s(item.count))
+                    ])
+                  ])
+                : _vm._e()
             }),
             0
           )

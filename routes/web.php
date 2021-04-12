@@ -17,3 +17,4 @@ Route::get('/', 'AnalyticController@index');
 
 Route::get('/analytics', 'Analytic\RealtimeController@test');
 Route::get('/analytics/realtime', 'Analytic\RealtimeController@index');
+Route::get('/analytics/page_views', 'Analytic\PageViewController@index');
